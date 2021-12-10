@@ -1,0 +1,13 @@
+version: "3.7"
+
+services: 
+  app: 
+    build: . 
+    # image: localhost/e-learning 
+    ports: 
+      - 3000:3000
+    working_dir: /usr/src/app
+    environment: 
+      API_BASE_URL: https://ltiidz7368.execute-api.ca-central-1.amazonaws.com
+      API_UPLOAD_URL: https://ltiidz7368.execute-api.ca-central-1.amazonaws.com
+      API_FILE_URL: https://e-learning-upload-files.s3.ca-central-1.amazonaws.com
